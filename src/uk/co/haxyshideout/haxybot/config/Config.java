@@ -7,7 +7,7 @@ import org.apache.commons.io.IOUtils;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -19,9 +19,19 @@ public class Config {
 	private static BotConfig config = null;
 	private static final String configFile = "./resources/config.json";
 
+	public static void main(String[] args)
+	{
+		new Config();
+	}
+	public Config() {
+		getConfig();
+
+	}
+
 	public static BotConfig getConfig() {
 		if(config == null)
 			loadConfig();
+		saveConfig();
 		return config;
 	}
 
@@ -48,7 +58,7 @@ public class Config {
 		public String server;
 		public String username;
 		public String password;
-		public List<String> channels;
+		public Set<String> channels;
 	}
 
 
