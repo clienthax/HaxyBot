@@ -1,0 +1,4 @@
+out
+resources/config.json
+*.iml
+.idea
