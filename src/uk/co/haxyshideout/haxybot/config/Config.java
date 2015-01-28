@@ -2,6 +2,7 @@ package uk.co.haxyshideout.haxybot.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.SerializedName;
 import org.apache.commons.io.IOUtils;
 
 import java.io.FileReader;

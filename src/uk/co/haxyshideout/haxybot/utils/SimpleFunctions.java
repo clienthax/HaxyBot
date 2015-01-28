@@ -20,7 +20,6 @@ public class SimpleFunctions {
 	}
 
 	public static String combineColours(String background, String foreground) {
-		//String color = background+","+foreground.substring(1);
 		return foreground+","+background.substring(1);
 	}
 

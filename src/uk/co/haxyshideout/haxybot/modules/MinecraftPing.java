@@ -23,7 +23,7 @@ public class MinecraftPing implements ITaskRunner {
 
 	@Override
 	public void processTask(HaxyBot bot, String channel, String sender, String message, String substring) {
-		String server = message.substring(message.indexOf(" ", message.indexOf(" ") + 1)+1);
+		String server = substring;
 		if(!server.contains(":"))
 			server = server+":25565";
 		String[] parts = server.split(":");

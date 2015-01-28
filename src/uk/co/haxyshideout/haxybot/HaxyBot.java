@@ -80,11 +80,11 @@ public class HaxyBot extends PircBot {
 
 	@Override
 	public void onMessage(String channel, String sender, String login, String hostname, String message) {
-		if(!message.startsWith("!hax") && !message.startsWith("!haxy"))
+		if(!message.startsWith("^"))
 			return;
 
-		String task = message.split(" ")[1];
-		String substring = message.substring(message.indexOf(" ", message.indexOf(" ") + 1)+1);
+		String task = message.split(" ")[0].substring(1);
+		String substring = message.substring(message.indexOf(" ")+1);
 
 		for(ITaskRunner taskRunner : taskRunners)
 		{
