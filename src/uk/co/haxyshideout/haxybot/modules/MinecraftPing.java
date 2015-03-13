@@ -1,6 +1,6 @@
 package uk.co.haxyshideout.haxybot.modules;
 
-import org.jibble.pircbot.Colors;
+import org.pircbotx.Colors;
 import uk.co.haxyshideout.haxybot.HaxyBot;
 import uk.co.haxyshideout.haxybot.modules.interfaces.AccessLevel;
 import uk.co.haxyshideout.haxybot.modules.interfaces.ITaskRunner;

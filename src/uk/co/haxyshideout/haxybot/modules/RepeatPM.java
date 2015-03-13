@@ -5,12 +5,12 @@ import uk.co.haxyshideout.haxybot.modules.interfaces.AccessLevel;
 import uk.co.haxyshideout.haxybot.modules.interfaces.ITaskRunner;
 
 /**
- * Created by clienthax on 9/1/2015.
+ * Created by clienthax on 13/3/2015.
  */
-public class Disconnect implements ITaskRunner {
+public class RepeatPM implements ITaskRunner {
 	@Override
 	public String[] getCommandAliases() {
-		return new String[]{"dc","disconnect","quit"};
+		return new String[]{"repeatpm"};
 	}
 
 	@Override
@@ -20,6 +20,9 @@ public class Disconnect implements ITaskRunner {
 
 	@Override
 	public void processTask(HaxyBot bot, String channel, String sender, String message, String substring) {
-		//Nope
+		String[] parts = substring.split(" ");
+		String user = parts[0];
+		String tosend = substring.substring(substring.indexOf(" ")+1);
+		bot.sendMessage(user, tosend);
 	}
 }
