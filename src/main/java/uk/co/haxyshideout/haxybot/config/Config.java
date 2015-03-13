@@ -59,6 +59,9 @@ public class Config {
 		public String username;
 		public String password;
 		public Set<String> channels;
+		public String imgflipUsername;
+		public String imgflipPassword;
+		public String xdccFolder;
 	}
 
 

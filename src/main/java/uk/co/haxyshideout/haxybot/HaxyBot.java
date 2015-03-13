@@ -72,7 +72,7 @@ public class HaxyBot extends ListenerAdapter {
 			event.respond("Transfer Denied");
 			return;
 		}
-		File saveFile = new File("/mnt/nas/XDCC", event.getSafeFilename());
+		File saveFile = new File(Config.getConfig().xdccFolder, event.getSafeFilename());
 
 		event.acceptAndTransfer(saveFile);
 	}
